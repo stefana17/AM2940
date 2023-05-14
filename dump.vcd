@@ -1,0 +1,801 @@
+$date
+	Mon Sep 19 16:31:50 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_AM2940 $end
+$scope module DUT $end
+$var wire 3 ! I [2:0] $end
+$var wire 1 " aci $end
+$var wire 1 # aco $end
+$var wire 8 $ acout [7:0] $end
+$var wire 8 % addrmuxout [7:0] $end
+$var wire 8 & addrout [7:0] $end
+$var wire 8 ' arout [7:0] $end
+$var wire 1 ( clk $end
+$var wire 3 ) crout [2:0] $end
+$var wire 8 * datain [7:0] $end
+$var wire 8 + dataout [7:0] $end
+$var wire 1 , deca $end
+$var wire 1 - decw $end
+$var wire 1 . done $end
+$var wire 1 / ena $end
+$var wire 1 0 enw $end
+$var wire 1 1 inca $end
+$var wire 1 2 incw $end
+$var wire 1 3 oedata $end
+$var wire 1 4 plac $end
+$var wire 1 5 plar $end
+$var wire 1 6 plcr $end
+$var wire 1 7 plwc $end
+$var wire 1 8 plwr $end
+$var wire 1 9 resw $end
+$var wire 1 : sela $end
+$var wire 2 ; seld [1:0] $end
+$var wire 1 < selw $end
+$var wire 1 = wci $end
+$var wire 1 > wco $end
+$var wire 8 ? wcout [7:0] $end
+$var wire 8 @ wordmuxout [7:0] $end
+$var wire 8 A wrout [7:0] $end
+$scope module address_register_inst $end
+$var wire 1 ( clk $end
+$var wire 8 B din [7:0] $end
+$var wire 1 5 pl $end
+$var reg 8 C dataout [7:0] $end
+$upscope $end
+$scope module word_count_register_inst $end
+$var wire 1 ( clk $end
+$var wire 8 D din [7:0] $end
+$var wire 1 8 pl $end
+$var reg 8 E dataout [7:0] $end
+$upscope $end
+$scope module address_mux_inst $end
+$var wire 8 F dataout [7:0] $end
+$var wire 8 G di0 [7:0] $end
+$var wire 8 H di1 [7:0] $end
+$var wire 1 : sel $end
+$upscope $end
+$scope module word_count_mux_inst $end
+$var wire 8 I dataout [7:0] $end
+$var wire 8 J di0 [7:0] $end
+$var wire 8 K di1 [7:0] $end
+$var wire 1 < sel $end
+$upscope $end
+$scope module address_counter_inst $end
+$var wire 1 " cin $end
+$var wire 1 ( clk $end
+$var wire 1 # co $end
+$var wire 1 , dec $end
+$var wire 8 L di [7:0] $end
+$var wire 1 / enc $end
+$var wire 1 1 inc $end
+$var wire 1 4 pl $end
+$var wire 1 M reset $end
+$var reg 8 N dataout [7:0] $end
+$upscope $end
+$scope module word_count_counter_inst $end
+$var wire 1 = cin $end
+$var wire 1 ( clk $end
+$var wire 1 > co $end
+$var wire 1 - dec $end
+$var wire 8 O di [7:0] $end
+$var wire 1 0 enc $end
+$var wire 1 2 inc $end
+$var wire 1 4 pl $end
+$var wire 1 9 reset $end
+$var reg 8 P dataout [7:0] $end
+$upscope $end
+$scope module control_register_inst $end
+$var wire 1 ( clk $end
+$var wire 3 Q din [2:0] $end
+$var wire 1 6 plcr $end
+$var reg 3 R dataout [2:0] $end
+$upscope $end
+$scope module done_gen_inst $end
+$var wire 1 = cinw $end
+$var wire 8 S doac [7:0] $end
+$var wire 8 T dowc [7:0] $end
+$var wire 8 U dowr [7:0] $end
+$var wire 2 V mode [1:0] $end
+$var reg 1 W done $end
+$upscope $end
+$scope module datamux_inst $end
+$var wire 1 ( clk $end
+$var wire 8 X di0 [7:0] $end
+$var wire 8 Y di1 [7:0] $end
+$var wire 3 Z di2 [2:0] $end
+$var wire 2 [ seld [1:0] $end
+$var reg 8 \ dataout [7:0] $end
+$upscope $end
+$scope module instruction_decoder_inst $end
+$var wire 3 ] CR [2:0] $end
+$var wire 3 ^ I [2:0] $end
+$var reg 1 _ deca $end
+$var reg 1 ` decw $end
+$var reg 1 a ena $end
+$var reg 1 b enw $end
+$var reg 1 c inca $end
+$var reg 1 d incw $end
+$var reg 1 e oedata $end
+$var reg 1 f plac $end
+$var reg 1 g plar $end
+$var reg 1 h plcr $end
+$var reg 1 i plwc $end
+$var reg 1 j plwr $end
+$var reg 1 k resw $end
+$var reg 1 l sela $end
+$var reg 2 m seld [1:0] $end
+$var reg 1 n selw $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+xn
+bx m
+xl
+xk
+xj
+xi
+xh
+xg
+xf
+xe
+xd
+xc
+xb
+xa
+x`
+x_
+bx ^
+bx ]
+bx \
+bz [
+bx Z
+bx Y
+bx X
+0W
+bx V
+bx U
+bx T
+bx S
+bx R
+b11 Q
+bx P
+bx O
+bx N
+0M
+bx L
+bx K
+b10100011 J
+bx I
+bx H
+b10100011 G
+bx F
+bx E
+b10100011 D
+bx C
+b10100011 B
+bx A
+bx @
+bx ?
+1>
+x=
+x<
+bz ;
+x:
+x9
+x8
+x7
+x6
+x5
+x4
+x3
+x2
+x1
+x0
+x/
+0.
+x-
+x,
+bx +
+b10100011 *
+bx )
+0(
+bx '
+bx &
+bx %
+bx $
+1#
+x"
+bx !
+$end
+#5
+0e
+03
+0`
+0-
+0d
+02
+0b
+00
+0i
+07
+0k
+09
+0_
+0,
+0c
+01
+0a
+0/
+0f
+04
+1h
+16
+0j
+08
+0g
+05
+b110 Q
+0=
+0"
+b0 !
+b0 ^
+b110 *
+b110 B
+b110 D
+b110 G
+b110 J
+1(
+#10
+0(
+#15
+1e
+13
+b1x m
+0h
+06
+1(
+b1 !
+b1 ^
+#20
+0(
+#25
+b10101010 E
+b10101010 A
+b10101010 K
+b10101010 U
+b10 Q
+b10101010 @
+b10101010 I
+b10101010 O
+0e
+03
+1i
+17
+bx m
+0n
+0<
+1j
+18
+1(
+b10101010 *
+b10101010 B
+b10101010 D
+b10101010 G
+b10101010 J
+b110 !
+b110 ^
+#30
+0(
+#35
+b10101010 P
+b10101010 ?
+b10101010 T
+b10101010 Y
+b10101010 C
+b10101010 '
+b10101010 H
+b10101010 %
+b10101010 F
+b10101010 L
+0i
+07
+1f
+14
+xn
+x<
+0l
+0:
+0j
+08
+1g
+15
+1(
+b101 !
+b101 ^
+#40
+0(
+#45
+1e
+13
+0f
+04
+b0 m
+xl
+x:
+0g
+05
+1(
+b11 !
+b11 ^
+#50
+0(
+#55
+b0 V
+b0 R
+b0 )
+b0 Z
+b0 ]
+b0 Q
+bx0x0x0x0 %
+bx0x0x0x0 F
+bx0x0x0x0 L
+bx0x0x0x0 @
+bx0x0x0x0 I
+bx0x0x0x0 O
+0e
+03
+bx m
+1h
+16
+1(
+b0 *
+b0 B
+b0 D
+b0 G
+b0 J
+b0 !
+b0 ^
+#60
+0(
+#65
+b10101001 P
+b10101001 ?
+b10101001 T
+b10101001 Y
+1`
+1-
+1b
+10
+1c
+11
+1a
+1/
+0h
+06
+1(
+b111 !
+b111 ^
+#70
+0(
+#75
+bx0x0x0x0 \
+bx0x0x0x0 +
+bx0x0x0x0 P
+bx0x0x0x0 ?
+bx0x0x0x0 T
+bx0x0x0x0 Y
+bx0x0x0x0 N
+bx0x0x0x0 $
+bx0x0x0x0 S
+bx0x0x0x0 X
+bx0x0x0x0 &
+b10101010 @
+b10101010 I
+b10101010 O
+b10101010 %
+b10101010 F
+b10101010 L
+0`
+0-
+0b
+00
+1i
+17
+0c
+01
+0a
+0/
+1f
+14
+1n
+1<
+1l
+1:
+1(
+b100 !
+b100 ^
+#80
+0(
+#85
+bx0x0x0x0 @
+bx0x0x0x0 I
+bx0x0x0x0 O
+bx0x0x0x0 %
+bx0x0x0x0 F
+bx0x0x0x0 L
+1e
+13
+0i
+07
+0f
+04
+b0 m
+xn
+x<
+xl
+x:
+1(
+b11 !
+b11 ^
+#90
+0(
+#95
+b0 E
+b0 A
+b0 K
+b0 U
+b0 @
+b0 I
+b0 O
+0e
+03
+1i
+17
+bx m
+0n
+0<
+1j
+18
+1(
+b110 !
+b110 ^
+#100
+0(
+#105
+b1 V
+b1 R
+b1 )
+b1 Z
+b1 ]
+b1 Q
+bx0x0x0xx %
+bx0x0x0xx F
+bx0x0x0xx L
+b0x @
+b0x I
+b0x O
+0i
+07
+1h
+16
+xn
+x<
+0j
+08
+1(
+b1 *
+b1 B
+b1 D
+b1 G
+b1 J
+b0 !
+b0 ^
+#110
+0(
+#115
+b0 P
+b0 ?
+b0 T
+b0 Y
+b10111011 E
+b10111011 A
+b10111011 K
+b10111011 U
+b11 Q
+b101x101x %
+b101x101x F
+b101x101x L
+b10111011 @
+b10111011 I
+b10111011 O
+1k
+19
+0h
+06
+1j
+18
+1(
+b10111011 *
+b10111011 B
+b10111011 D
+b10111011 G
+b10111011 J
+b110 !
+b110 ^
+#120
+0(
+#125
+b1 Q
+bx0x0x0xx %
+bx0x0x0xx F
+bx0x0x0xx L
+bx0xxx0x1 @
+bx0xxx0x1 I
+bx0xxx0x1 O
+0k
+09
+1h
+16
+0j
+08
+1(
+b1 *
+b1 B
+b1 D
+b1 G
+b1 J
+b0 !
+b0 ^
+#130
+0(
+#135
+bx0x0x0xx \
+bx0x0x0xx +
+bx0x0x0xx N
+bx0x0x0xx $
+bx0x0x0xx S
+bx0x0x0xx X
+bx0x0x0xx &
+b10101010 %
+b10101010 F
+b10101010 L
+1k
+19
+1f
+14
+0h
+06
+1l
+1:
+1(
+b100 !
+b100 ^
+#140
+0(
+#145
+b0 V
+b0 R
+b0 )
+b0 Z
+b0 ]
+bx0x0x0x0 %
+bx0x0x0x0 F
+bx0x0x0x0 L
+b0 Q
+bx0xxx0xx @
+bx0xxx0xx I
+bx0xxx0xx O
+0k
+09
+0f
+04
+1h
+16
+xl
+x:
+1(
+b0 *
+b0 B
+b0 D
+b0 G
+b0 J
+b0 !
+b0 ^
+#150
+0(
+#155
+bx0x0x0x0 \
+bx0x0x0x0 +
+bx0xxx0xx P
+bx0xxx0xx ?
+bx0xxx0xx T
+bx0xxx0xx Y
+bx0x0x0x0 N
+bx0x0x0x0 $
+bx0x0x0x0 S
+bx0x0x0x0 X
+bx0x0x0x0 &
+b10111011 @
+b10111011 I
+b10111011 O
+b10101010 %
+b10101010 F
+b10101010 L
+1i
+17
+1f
+14
+0h
+06
+1n
+1<
+1l
+1:
+1(
+b100 !
+b100 ^
+#160
+0(
+#165
+bx0xxx0xx @
+bx0xxx0xx I
+bx0xxx0xx O
+bx0x0x0x0 %
+bx0x0x0x0 F
+bx0x0x0x0 L
+0i
+07
+0f
+04
+1h
+16
+xn
+x<
+xl
+x:
+1(
+b0 !
+b0 ^
+#170
+0(
+#175
+1(
+#180
+0(
+#185
+1(
+#190
+0(
+#195
+1(
+#200
+0(
+#205
+1(
+#210
+0(
+#215
+1(
+#220
+0(
+#225
+1(
+#230
+0(
+#235
+1(
+#240
+0(
+#245
+1(
+#250
+0(
+#255
+1(
+#260
+0(
+#265
+1(
+#270
+0(
+#275
+1(
+#280
+0(
+#285
+1(
+#290
+0(
+#295
+1(
+#300
+0(
+#305
+1(
+#310
+0(
+#315
+1(
+#320
+0(
+#325
+1(
+#330
+0(
+#335
+1(
+#340
+0(
+#345
+1(
+#350
+0(
+#355
+1(
+#360
+0(
+#365
+1(
+#370
+0(
+#375
+1(
+#380
+0(
+#385
+1(
+#390
+0(
+#395
+1(
+#400
+0(
+#405
+1(
+#410
+0(
+#415
+1(
+#420
+0(
+#425
+1(
+#430
+0(
+#435
+1(
+#440
+0(
+#445
+1(
+#450
+0(
+#455
+1(
+#460
+0(
+#465
+1(
+#470
+0(
+#475
+1(
+#480
+0(
+#485
+1(
+#490
+0(
+#495
+1(
+#500
+0(
